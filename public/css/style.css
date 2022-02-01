@@ -274,7 +274,6 @@ p {
   grid-template-columns: 1fr;
   padding-top: 3.6rem;
   padding-bottom: 3.6rem;
-  padding-right: 1.8rem;
 }
 .instruction h1 {
   padding-bottom: 1.8rem;
@@ -282,7 +281,7 @@ p {
 @media (min-width: 768px) and (max-width: 1023px) {
   .instruction {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 55fr 45fr;
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
     padding-right: 2.7rem;
