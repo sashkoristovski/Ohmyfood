@@ -1,0 +1,95 @@
+
+@mixin btn {
+  background: linear-gradient(
+    165deg,
+    $colour-secondary 0%,
+    $colour-primary 90%
+  );
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  color: $colour-white;
+  font-size: 1.6rem;
+  overflow: hidden;
+  // padding: 1.6rem 3.2rem;
+  padding: $layout-element-padding $layout-element-padding * 1.5;
+  position: relative;
+  transition: transform 450ms;
+  @include tablet {
+    font-size: 2.4rem;
+    padding: $layout-element-padding * 1.25 $layout-element-padding * 2.5;
+  }
+  @include desktop {
+    font-size: 3.6rem;
+    padding: $layout-element-padding * 1.5 $layout-element-padding * 3;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  &--full-width {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+///////////////////////////////////////////////////////////
+
+@mixin card-shadow {
+  box-shadow: 0px 2px 1rem darken($color: $bg-color, $amount: 20%);
+  border-radius: 1.6rem;
+}
+///////////////////////////////////////////////////////////
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+///////////////////////////////////////////////////////////
+@mixin like-btn {
+  font-size: 2.4rem;
+  @include tablet {
+    font-size: 3rem;
+  }
+  @include desktop {
+    font-size: 3.6rem;
+  }
+  .liked__filled {
+    display: none;
+  }
+  &:hover {
+    .liked__filled {
+      display: contents;
+    }
+    .liked__not-filled {
+      display: none;
+    }
+    background: -webkit-linear-gradient($colour-primary, $colour-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+// Heart icon filled in
+///////////////////////////////////////////////////////////
+
+@keyframes spinPicker {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes showPicker {
+  0% {
+    display: none;
+  }
+  100% {
+    display: flex;
+  }
+}
+// Mixin used in menu pages
+///////////////////////////////////////////////////////////

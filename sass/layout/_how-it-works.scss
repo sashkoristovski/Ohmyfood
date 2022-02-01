@@ -1,0 +1,128 @@
+.instruction {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: $layout-element-padding * 2;
+  padding-bottom: $layout-element-padding * 2;
+  padding-right: $layout-element-padding;
+  h1 {
+    padding-bottom: $layout-element-padding;
+  }
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: $layout-element-padding * 2.5;
+    padding-bottom: $layout-element-padding * 2.5;
+    padding-right: $layout-element-padding*1.5;
+    column-gap: $layout-element-padding;
+    h1 {
+      font-size: 3.6rem;
+    }
+    &__slideshows {
+      position: relative;
+    }
+  }
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: $layout-element-padding * 3;
+    padding-bottom: $layout-element-padding * 3;
+    padding-right: $layout-element-padding*2;
+    column-gap: $layout-element-padding*1.5;
+    h1 {
+      font-size: 4.4rem;
+    }
+  }
+}
+.how-it-works {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $layout-element-padding;
+  padding-left: $layout-element-padding;
+  padding-right: $layout-element-padding;
+  @include tablet {
+    gap: $layout-element-padding * 1.5;
+    h1 {
+      font-size: 3.6rem;
+      padding-left: $layout-element-padding;
+    }
+  }
+  @include desktop {
+    gap: $layout-element-padding * 2;
+    h1 {
+      padding-left: $layout-element-padding;
+    }
+  }
+
+  &__card {
+    position: relative;
+    padding-left: $layout-element-padding;
+    @include tablet {
+      padding-left: $layout-element-padding * 1.5;
+      h2 {
+        font-size: 2rem;
+      }
+      i {
+        font-size: 2rem;
+      }
+    }
+    @include desktop {
+      padding-left: $layout-element-padding * 2;
+      h2 {
+        font-size: 2.4rem;
+        i {
+          font-size: 2.4rem;
+        }
+      }
+    }
+    &--step {
+      display: flex;
+      align-items: center;
+      gap: $layout-element-padding;
+      padding: $layout-element-padding 0;
+      padding-left: $layout-element-padding;
+      background-color: $bg-color;
+      @include card-shadow;
+      @include tablet {
+        gap: $layout-element-padding * 1.2;
+        padding: $layout-element-padding * 1.2 0;
+        padding-left: $layout-element-padding * 1.5;
+      }
+      @include desktop {
+        gap: $layout-element-padding * 1.5;
+        padding: $layout-element-padding * 1.5 0;
+        padding-left: $layout-element-padding * 2;
+      }
+      &:hover {
+        background-color: lighten($color: $colour-primary, $amount: 30%);
+      }
+    }
+    &:hover i {
+      color: $colour-primary;
+    }
+    &--p {
+      display: inline-block;
+      position: absolute;
+      padding: $layout-element-padding * 0.3;
+      font-size: 1.4rem;
+      background-color: $colour-primary;
+      border-radius: 50%;
+      left: 0.6rem;
+      top: 1.4rem;
+
+      color: $colour-white;
+      @include tablet {
+        padding: $layout-element-padding * 0.4;
+        font-size: 1.6rem;
+        left: 1.3rem;
+        top: 1.5rem;
+      }
+      @include desktop {
+        padding: $layout-element-padding * 0.5;
+        font-size: 1.8rem;
+        left: 2rem;
+        top: 2rem;
+      }
+    }
+  }
+}

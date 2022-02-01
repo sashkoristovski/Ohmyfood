@@ -1,0 +1,224 @@
+body {
+  @include tablet {
+    // max-width: 60rem;
+  }
+  @include desktop {
+    max-width: 120rem;
+  }
+}
+
+.menu {
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  gap: $layout-element-padding;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: $layout-element-padding * 2;
+    padding-left: $layout-element-padding;
+    padding-right: $layout-element-padding * 2;
+    border-radius: 3rem 3rem 0 0;
+    background-color: $bg-color;
+    margin-top: -6rem;
+    @include tablet {
+      padding-top: $layout-element-padding * 2 * 1.5;
+      padding-left: $layout-element-padding * 1.5;
+      padding-right: $layout-element-padding * 2 * 1.5;
+      h2 {
+        font-size: 3.6rem;
+      }
+    }
+    @include desktop {
+      padding-top: $layout-element-padding * 2 * 2;
+      padding-left: $layout-element-padding * 2;
+      padding-right: $layout-element-padding * 2 * 2;
+      h2 {
+        font-size: 4.4rem;
+      }
+    }
+    .liked {
+      @include like-btn;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: $layout-element-padding;
+    padding-bottom: $layout-element-padding * 2.5;
+    @include tablet {
+      padding-top: $layout-element-padding * 1.5;
+      padding-bottom: $layout-element-padding * 2.5 * 1.5;
+    }
+    @include desktop {
+      padding-top: $layout-element-padding * 2;
+      padding-bottom: $layout-element-padding * 2.5 * 2;
+    }
+  }
+}
+
+.menu-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: $layout-element-padding;
+  width: 100%;
+  background-color: $colour-white;
+  border-radius: 1rem;
+  overflow: hidden;
+  @include card-shadow;
+  @include tablet {
+    gap: $layout-element-padding * 0.5;
+    padding: $layout-element-padding * 1.5;
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  @include desktop {
+    gap: $layout-element-padding * 0.5;
+    padding: $layout-element-padding * 2;
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+
+  & p {
+    font-weight: 400;
+    color: $color-p-light;
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 2.4rem;
+    }
+  }
+  &--flex {
+    display: flex;
+    flex-direction: column;
+    gap: $layout-element-padding;
+    padding: 0 $layout-element-padding;
+    @include tablet {
+      gap: $layout-element-padding * 1.5;
+      padding: 0 $layout-element-padding * 1.5;
+    }
+    @include desktop {
+      gap: $layout-element-padding * 1.5;
+      padding: 0 $layout-element-padding * 2;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    padding: $layout-element-padding;
+    &--removed-top-padding {
+      padding-top: unset;
+    }
+    @include tablet {
+      padding: $layout-element-padding * 1.5;
+      h3 {
+        font-size: 2rem;
+      }
+    }
+    @include desktop {
+      padding: $layout-element-padding * 2;
+      h3 {
+        font-size: 2.4rem;
+      }
+    }
+
+    &--line {
+      width: 4rem;
+      height: 8px;
+      border-bottom: 4px solid $colour-tertiary;
+      @include tablet {
+        width: 5rem;
+        border-width: 5px;
+      }
+      @include desktop {
+        width: 6rem;
+        border-width: 6px;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__price {
+      width: 7rem;
+      text-align: right;
+    }
+
+    &--hover {
+      background: $colour-tertiary;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 3rem;
+      display: none;
+      transition: width 0.5s;
+      @include tablet {
+        font-size: 4rem;
+      }
+      @include desktop {
+        font-size: 5rem;
+      }
+    }
+
+    div:first-child {
+      overflow: hidden;
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    div:last-child i {
+      animation: spinPicker 0.5s linear 1;
+    }
+    div:last-child {
+      animation: showPicker 0.5s linear 1;
+      width: 6rem;
+      @include tablet {
+        width: 8rem;
+      }
+      @include desktop {
+        width: 10rem;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    div:first-child {
+      // empty div paragrah
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    div:nth-child(2) {
+      margin-right: 3rem;
+      // moving price to right on hover state
+      text-align: center;
+      @include tablet {
+        margin-right: 5rem;
+      }
+      @include desktop {
+        margin-right: 7rem;
+      }
+    }
+    div:last-child {
+      // menu-card__info--hover div
+      display: flex;
+      // margin: 0;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.restaurants {
+  background-color: $bg-color;
+  padding: $layout-element-padding * 2 0;
+  @include tablet {
+    padding: $layout-element-padding * 2.5 0;
+  }
+  @include desktop {
+    padding: $layout-element-padding * 3 0;
+  }
+  h1 {
+    padding-bottom: $layout-element-padding;
+    padding-left: $layout-element-padding;
+    @include tablet {
+      font-size: 3.6rem;
+      padding-bottom: $layout-element-padding * 1.5;
+      padding-left: $layout-element-padding * 1.5;
+    }
+    @include desktop {
+      font-size: 4.4rem;
+      padding-bottom: $layout-element-padding * 2;
+      padding-left: $layout-element-padding * 2;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    gap: $layout-element-padding;
+    padding: 0 $layout-element-padding;
+    @include tablet {
+      gap: $layout-element-padding * 1.5;
+      padding: 0 $layout-element-padding * 1.5;
+    }
+    @include desktop {
+      gap: $layout-element-padding * 2;
+      padding: 0 $layout-element-padding * 2;
+    }
+  }
+  &__card {
+    border-radius: 1.4rem;
+    overflow: hidden;
+    position: relative;
+    &__details {
+      background-color: $colour-white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $layout-element-padding;
+
+      @include tablet {
+        padding: $layout-element-padding * 1.5;
+      }
+      @include desktop {
+        padding: $layout-element-padding * 2;
+      }
+      & span {
+        @include like-btn;
+      }
+      &__text {
+        display: flex;
+        flex-direction: column;
+        gap: $layout-element-padding * 0.5;
+        @include tablet {
+          h2 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 2rem;
+          }
+        }
+        @include desktop {
+          h2 {
+            font-size: 2.4rem;
+          }
+          p {
+            font-size: 2.4rem;
+          }
+        }
+      }
+      &--p {
+        font-weight: 400;
+        color: $color-p-light;
+      }
+    }
+    &__new {
+      background: $colour-tertiary;
+      color: $tertiary-contrast-dark;
+      padding: $layout-element-padding * 0.5 $layout-element-padding;
+      position: absolute;
+      top: 1.8rem;
+      right: 1.8rem;
+      @include tablet {
+        padding: $layout-element-padding * 0.7 $layout-element-padding * 1.5;
+        position: absolute;
+        top: 1.8rem * 1.5;
+        right: 1.8rem * 1.5;
+      }
+      @include desktop {
+        padding: $layout-element-padding $layout-element-padding * 2;
+        position: absolute;
+        top: 1.8rem * 2;
+        right: 1.8rem * 2;
+      }
+    }
+    & p {
+      @include tablet {
+        font-size: 2rem;
+      }
+      @include desktop {
+        font-size: 2.4rem;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 14rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    @include tablet {
+      height: 22rem;
+    }
+    @include desktop {
+      height: 30rem;
+    }
+  }
+}

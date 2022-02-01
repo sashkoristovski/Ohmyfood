@@ -1,3 +1,0 @@
-# Ogmyfood
-
-Token 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

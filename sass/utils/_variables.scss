@@ -1,0 +1,31 @@
+// Colours var
+
+$colour-primary: #9356dc;
+$colour-secondary: #ff79da;
+$colour-tertiary: #99e2d0;
+$tertiary-contrast-dark: darken(
+  $color: $colour-tertiary,
+  $amount: 50%,
+);
+$colour-accent: #474747;
+$colour-white: #fff;
+$bg-color: #f3f3f3;
+$color-p-light: lighten(
+  $color: $colour-accent,
+  $amount: 20%,
+);
+
+// - Spacing system (px)
+// 2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+// Screen sizes
+$screenwidth-min: 3.2rem;
+$screenwidth-max: 144rem;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// page layout
+// $layout-block-padding: 3.6rem;
+
+// elements layout
+$layout-element-padding: 1.8rem;

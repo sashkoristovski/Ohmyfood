@@ -1,0 +1,117 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &__subheader {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    & i {
+      font-size: 2.4rem;
+      padding-left: $layout-element-padding;
+
+      @include tablet {
+        font-size: 4.4rem;
+        padding-left: $layout-element-padding * 1.5;
+      }
+      @include desktop {
+        font-size: 6.2rem;
+        padding-left: $layout-element-padding * 2;
+      }
+    }
+  }
+  &__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    text-align: center;
+    padding: $layout-element-padding 0;
+    @include tablet {
+      padding: $layout-element-padding * 1.5;
+    }
+    @include desktop {
+      padding: $layout-element-padding * 2;
+    }
+  }
+  &__img {
+    object-fit: fill;
+    width: 60%;
+  }
+  &__background_image {
+    width: 100%;
+    max-width: $screenwidth-max;
+    object-position: top;
+  }
+  &__title {
+    background-color: darken($color: $bg-color, $amount: 10%);
+    border-top: solid 0.4rem darken($color: $bg-color, $amount: 25%);
+    padding: $layout-element-padding 0;
+    display: flex;
+    gap: $layout-element-padding;
+    justify-content: center;
+    @include tablet {
+      padding: $layout-element-padding * 1.5;
+      h1 {
+        font-size: 5.2rem;
+      }
+      i {
+        font-size: 3.6rem;
+      }
+      p {
+        font-size: 3.6rem;
+      }
+    }
+    @include desktop {
+      padding: $layout-element-padding * 2;
+      h1 {
+        font-size: 6.2rem;
+      }
+      i {
+        font-size: 4.4rem;
+      }
+      p {
+        font-size: 4.4rem;
+      }
+    }
+  }
+  &__discover {
+    text-align: center;
+    background-color: $bg-color;
+    padding: $layout-element-padding * 2 0;
+    display: flex;
+    flex-direction: column;
+    gap: $layout-element-padding * 2;
+    align-items: center;
+    @include tablet {
+      padding: $layout-element-padding * 2.5;
+      gap: $layout-element-padding * 2.5;
+      h1 {
+        font-size: 5.2rem;
+      }
+      i {
+        font-size: 3.6rem;
+      }
+      p {
+        font-size: 3.6rem;
+      }
+    }
+    @include desktop {
+      padding: $layout-element-padding * 3;
+      gap: $layout-element-padding * 3;
+      h1 {
+        font-size: 6.2rem;
+      }
+      i {
+        font-size: 4.4rem;
+      }
+      p {
+        font-size: 4.4rem;
+      }
+    }
+  }
+  &__discovery--p {
+    color: $color-p-light;
+  }
+}
