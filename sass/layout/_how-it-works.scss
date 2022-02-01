@@ -95,6 +95,8 @@
       }
       &:hover {
         background-color: lighten($color: $colour-primary, $amount: 30%);
+        cursor: pointer;
+      
       }
     }
     &:hover i {

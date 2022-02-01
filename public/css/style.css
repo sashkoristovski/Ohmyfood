@@ -386,6 +386,7 @@ p {
 }
 .how-it-works__card--step:hover {
   background-color: #e4d5f6;
+  cursor: pointer;
 }
 .how-it-works__card:hover i {
   color: #9356dc;
