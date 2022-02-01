@@ -816,25 +816,25 @@ p {
   animation-delay: 0s;
 }
 .untitled__slide:nth-child(1) .untitled__slideBg {
-  background-image: url(/public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-image: url(./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 .untitled__slide:nth-child(2) {
   animation-delay: 5s;
 }
 .untitled__slide:nth-child(2) .untitled__slideBg {
-  background-image: url(/public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-image: url(./public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 .untitled__slide:nth-child(3) {
   animation-delay: 10s;
 }
 .untitled__slide:nth-child(3) .untitled__slideBg {
-  background-image: url(/public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-image: url(./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
 .untitled__slide:nth-child(4) {
   animation-delay: 15s;
 }
 .untitled__slide:nth-child(4) .untitled__slideBg {
-  background-image: url(/public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-image: url(./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 .untitled__slideBg {
   position: relative;
