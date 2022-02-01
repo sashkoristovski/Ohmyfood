@@ -124,5 +124,14 @@
     @include desktop {
       height: 30rem;
     }
+    &--height {
+      height: 18rem;
+      @include tablet {
+        height: 28rem;
+      }
+      @include desktop {
+        height: 38rem;
+      }
+    }
   }
 }

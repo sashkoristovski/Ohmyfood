@@ -594,6 +594,19 @@ p {
     height: 30rem;
   }
 }
+.restaurants__img--height {
+  height: 18rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .restaurants__img--height {
+    height: 28rem;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants__img--height {
+    height: 38rem;
+  }
+}
 
 .footer {
   background-color: #474747;
