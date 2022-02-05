@@ -1,12 +1,3 @@
-body {
-  @include tablet {
-    // max-width: 60rem;
-  }
-  @include desktop {
-    max-width: 120rem;
-  }
-}
-
 .menu {
   background-color: $bg-color;
   display: flex;
