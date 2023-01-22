@@ -1,5 +1,7 @@
 Ohmyfood Website - Paris
 
+Ohmyfood is a new startup that wants to make a name for itself in the restaurant business. The objective is to develop a 100% mobile-friendly site that lists the menus of gourmet restaurants. In addition to having a classic reservation system, customers will be able to select the dishes they want for their meal so that they are ready when they arrive. No more wait times in restaurants.
+
 # Produce maintainable CSS stylesheets with SASS
 
 CSS is the palette we use to paint the web, making pages beautiful, identifiable, and responsive. In this class we’ll learn to write clean, maintainable, and modular CSS code through the implementation of designed naming and file structures, such as BEM, and the use of SASS, a CSS precompiler.
